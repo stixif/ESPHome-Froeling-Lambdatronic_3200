@@ -4,7 +4,7 @@ sensor:
     name: "${name} Kesseltemperatur"
     id: ${name}_Kesseltemperatur
     register_type: read
-    address: 0
+    address: 1
     unit_of_measurement: "°C"
     device_class: "temperature"
     state_class: "measurement"
@@ -17,7 +17,7 @@ sensor:
     name: "${name} Abgastemperatur"
     id: ${name}_Abgastemperatur
     register_type: read
-    address: 1
+    address: 2
     unit_of_measurement: "°C"
     device_class: "temperature"
     state_class: "measurement"
@@ -28,7 +28,7 @@ sensor:
     name: "${name} Verbleibende Heizstunden bis zur Asche entleeren Warnung"
     id: ${name}_Verbleibende_Heizstunden_bis_zur_Asche_entleeren_Warnung
     register_type: read
-    address: 86
+    address: 87
     unit_of_measurement: "h"
     value_type: U_WORD
 
@@ -37,7 +37,7 @@ sensor:
     name: "${name} Saugzug - Ansteuerung"
     id: ${name}_Saugzug_Ansteuerung
     register_type: read
-    address: 13
+    address: 14
     unit_of_measurement: "%"
     value_type: U_WORD
 
@@ -46,7 +46,7 @@ sensor:
     name: "${name} Saugzugdrehzahl"
     id: ${name}_Saugzugdrehzahl
     register_type: read
-    address: 6
+    address: 7
     unit_of_measurement: "rpm"
     value_type: U_WORD
 
@@ -55,7 +55,7 @@ sensor:
     name: "${name} Sauerstoffregler"
     id: ${name}_Sauerstoffregler
     register_type: read
-    address: 16
+    address: 17
     unit_of_measurement: "%"
     value_type: U_WORD
 
@@ -64,7 +64,7 @@ sensor:
     name: "${name} Restsauerstoffgehalt"
     id: ${name}_Restsauerstoffgehalt
     register_type: read
-    address: 3
+    address: 4
     unit_of_measurement: "%"
     accuracy_decimals: 1
     value_type: U_WORD
@@ -76,7 +76,7 @@ sensor:
     name: "${name} Rücklauffühler"
     id: ${name}_Ruecklauffuehler
     register_type: read
-    address: 9
+    address: 10
     unit_of_measurement: "°C"
     device_class: "temperature"
     state_class: "measurement"
@@ -89,7 +89,7 @@ sensor:
     name: "${name} Primärluft"
     id: ${name}_Primaerluft
     register_type: read
-    address: 11
+    address: 12
     unit_of_measurement: "%"
     value_type: U_WORD
 
@@ -98,7 +98,7 @@ sensor:
     name: "${name} Sekundärluft"
     id: ${name}_Sekundaerluft
     register_type: read
-    address: 12
+    address: 13
     unit_of_measurement: "%"
     value_type: U_WORD
 
@@ -107,7 +107,7 @@ sensor:
     name: "${name} Betriebsstunden"
     id: ${name}_Betriebsstunden
     register_type: read
-    address: 20
+    address: 21
     unit_of_measurement: "h"
     value_type: U_WORD
 
@@ -116,7 +116,7 @@ sensor:
     name: "${name} Stunden seit letzter Wartung"
     id: ${name}_Stunden_seit_letzter_Wartung
     register_type: read
-    address: 55
+    address: 56
     unit_of_measurement: "h"
     value_type: U_WORD
 
@@ -125,7 +125,7 @@ sensor:
     name: "${name} Betriebsstunden in der Feuererhaltung"
     id: ${name}_Betriebsstunden_in_der_Feuererhaltung
     register_type: read
-    address: 24
+    address: 25
     unit_of_measurement: "h"
     value_type: U_WORD
 
