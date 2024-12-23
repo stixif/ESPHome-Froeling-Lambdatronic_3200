@@ -4,7 +4,7 @@ sensor:
     name: "${name} Fuellstand im Pelletsbehaelter"
     id: ${name}_Fuellstand_im_Pelletsbehaelter
     register_type: read
-    address: 21
+    address: 22
     unit_of_measurement: "%"
     accuracy_decimals: 1
     value_type: U_WORD
@@ -16,7 +16,7 @@ sensor:
     name: "${name} Resetierbarer kg-Zaehler"
     id: ${name}_Resetierbarer_kg_Zaehler
     register_type: read
-    address: 81
+    address: 82
     unit_of_measurement: "kg"
     device_class: "weight"
     state_class: "measurement"
@@ -27,7 +27,7 @@ sensor:
     name: "${name} Resetierbarer t-Zaehler"
     id: ${name}_Resetierbarer_t_Zaehler
     register_type: read
-    address: 82
+    address: 83
     unit_of_measurement: "t"
     device_class: "weight"
     state_class: "measurement"
@@ -38,7 +38,7 @@ sensor:
     name: "${name} Pelletverbrauch Gesamt"
     id: ${name}_Pelletverbrauch_Gesamt
     register_type: read
-    address: 83
+    address: 84
     unit_of_measurement: "t"
     device_class: "weight"
     state_class: "measurement"
@@ -52,7 +52,7 @@ sensor:
     name: "${name} Pelletlager Restbestand"
     id: ${name}_Pelletlager_Restbestand
     register_type: holding
-    address: 319
+    address: 320
     unit_of_measurement: "t"
     device_class: "weight"
     state_class: "measurement"
