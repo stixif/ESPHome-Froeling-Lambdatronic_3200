@@ -77,7 +77,7 @@ sensor:
     name: "${name} Aussentemperatur"
     id: ${name}_Aussentemperatur
     register_type: read
-    address: 1000
+    address: 1001
     unit_of_measurement: "°C"
     device_class: "temperature"
     state_class: "measurement"
@@ -90,7 +90,7 @@ number:
     modbus_controller_id: ${modbus_controller_id}
     name: "${name} Bei welcher RL Temperatur an der Zirkulationsleitung soll die Pumpe ausschalten"
     id: ${name}_Bei_welcher_RL_Temperatur_an_der_Zirkulationsleitung_soll_die_Pumpe_ausschalten
-    address: 600
+    address: 601
     unit_of_measurement: "°C"
     value_type: U_WORD
     multiply: 2
@@ -101,7 +101,7 @@ number:
     modbus_controller_id: ${modbus_controller_id}
     name: "${name} Kessel-Solltemperatur"
     id: ${name}_Kessel_Solltemperatur
-    address: 0
+    address: 1
     unit_of_measurement: "°C"
     value_type: U_WORD
     multiply: 2
@@ -114,7 +114,7 @@ text_sensor:
     name: "${name} Anlagenzustand"
     id: ${name}_Anlagenzustand
     register_type: read
-    address: 4000
+    address: 4001
     raw_encode: HEXBYTES
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
@@ -137,7 +137,7 @@ text_sensor:
     name: "${name} Kesselzustand"
     id: ${name}_Kesselzustand
     register_type: read
-    address: 4001
+    address: 4002
     raw_encode: HEXBYTES
     lambda: |-
       uint16_t value = modbus_controller::word_from_hex_str(x, 0);
