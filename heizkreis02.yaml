@@ -8,7 +8,7 @@ sensor:
     unit_of_measurement: "°C"
     device_class: "temperature"
     state_class: "measurement"
-    value_type: U_WORD
+    value_type: S_WORD
     filters:
       - multiply: 0.5
 
@@ -19,6 +19,6 @@ sensor:
     register_type: read
     address: 26
     unit_of_measurement: "°C"
-    value_type: U_WORD
+    value_type: S_WORD
     filters:
       - multiply: 0.5
