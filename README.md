@@ -1,3 +1,4 @@
+# angepasst für einen S4T
 # ESPHome-Froeling-Lambdatronic_3200
 
 ![Dashboard - AllInOne](docs/ha_dashboard_aio.png)
