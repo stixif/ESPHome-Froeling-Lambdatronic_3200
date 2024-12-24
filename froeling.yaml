@@ -58,7 +58,7 @@ packages:
   remote_package:
     #url: https://github.com/GyroGearl00se/ESPHome-Froeling-Lambdatronic_3200
     url: https://github.com/stixif/ESPHome-Froeling-Lambdatronic_3200
-    ref: main
+    ref: S4T
     files: [
       boiler_01.yaml,
       heizkreis01.yaml,
