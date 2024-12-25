@@ -107,6 +107,15 @@ sensor:
     unit_of_measurement: "h"
     value_type: U_WORD
 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${name} Empfohlene Holzmenge beim Nachlegen"
+    id: ${name}_Empfohlene_Holzmenge_beim_Nachlegen
+    register_type: read
+    address: 266
+    unit_of_measurement: "k"
+    value_type: U_WORD
+    
 binary_sensor:
   - platform: template
     name: "${name} Kesselzustand Heizen"
