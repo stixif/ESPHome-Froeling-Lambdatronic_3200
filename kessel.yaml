@@ -22,22 +22,13 @@ sensor:
     device_class: "temperature"
     state_class: "measurement"
     value_type: U_WORD 
- 
-  - platform: modbus_controller
-    modbus_controller_id: ${modbus_controller_id}
-    name: "${name} Verbleibende Heizstunden bis zur Asche entleeren Warnung"
-    id: ${name}_Verbleibende_Heizstunden_bis_zur_Asche_entleeren_Warnung
-    register_type: read
-    address: 86
-    unit_of_measurement: "h"
-    value_type: U_WORD
 
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
     name: "${name} Saugzug - Ansteuerung"
     id: ${name}_Saugzug_Ansteuerung
     register_type: read
-    address: 13
+    address: 15
     unit_of_measurement: "%"
     value_type: U_WORD
 
@@ -46,7 +37,7 @@ sensor:
     name: "${name} Saugzugdrehzahl"
     id: ${name}_Saugzugdrehzahl
     register_type: read
-    address: 6
+    address: 7
     unit_of_measurement: "rpm"
     value_type: U_WORD
 
@@ -55,7 +46,7 @@ sensor:
     name: "${name} Sauerstoffregler"
     id: ${name}_Sauerstoffregler
     register_type: read
-    address: 16
+    address: 117
     unit_of_measurement: "%"
     value_type: U_WORD
 
@@ -76,7 +67,7 @@ sensor:
     name: "${name} Rücklauffühler"
     id: ${name}_Ruecklauffuehler
     register_type: read
-    address: 9
+    address: 10
     unit_of_measurement: "°C"
     device_class: "temperature"
     state_class: "measurement"
@@ -89,6 +80,7 @@ sensor:
     name: "${name} Primärluft"
     id: ${name}_Primaerluft
     register_type: read
+    # address: 11
     address: 11
     unit_of_measurement: "%"
     value_type: U_WORD
@@ -98,6 +90,7 @@ sensor:
     name: "${name} Sekundärluft"
     id: ${name}_Sekundaerluft
     register_type: read
+    # address: 12
     address: 12
     unit_of_measurement: "%"
     value_type: U_WORD
@@ -107,7 +100,7 @@ sensor:
     name: "${name} Betriebsstunden"
     id: ${name}_Betriebsstunden
     register_type: read
-    address: 20
+    address: 98
     unit_of_measurement: "h"
     value_type: U_WORD
 
@@ -116,7 +109,7 @@ sensor:
     name: "${name} Stunden seit letzter Wartung"
     id: ${name}_Stunden_seit_letzter_Wartung
     register_type: read
-    address: 55
+    address: 213
     unit_of_measurement: "h"
     value_type: U_WORD
 
@@ -125,7 +118,8 @@ sensor:
     name: "${name} Betriebsstunden in der Feuererhaltung"
     id: ${name}_Betriebsstunden_in_der_Feuererhaltung
     register_type: read
-    address: 24
+    # address: 24
+    address: 254
     unit_of_measurement: "h"
     value_type: U_WORD
 
