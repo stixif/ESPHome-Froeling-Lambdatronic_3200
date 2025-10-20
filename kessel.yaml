@@ -80,8 +80,7 @@ sensor:
     name: "${name} Primärluft"
     id: ${name}_Primaerluft
     register_type: read
-    # address: 11
-    address: 11
+    address: 16
     unit_of_measurement: "%"
     value_type: U_WORD
 
@@ -90,8 +89,7 @@ sensor:
     name: "${name} Sekundärluft"
     id: ${name}_Sekundaerluft
     register_type: read
-    # address: 12
-    address: 12
+    address: 17
     unit_of_measurement: "%"
     value_type: U_WORD
 
