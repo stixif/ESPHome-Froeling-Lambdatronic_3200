@@ -4,7 +4,7 @@ sensor:
     name: "${name} Boiler 1 Temperatur oben"
     id: ${name}_Boiler_1_Temperatur_oben
     register_type: read
-    address: 93
+    address: 94
     unit_of_measurement: "°C"
     device_class: "temperature"
     state_class: "measurement"
