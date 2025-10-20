@@ -90,7 +90,7 @@ number:
     modbus_controller_id: ${modbus_controller_id}
     name: "${name} Kessel-Solltemperatur"
     id: ${name}_Kessel_Solltemperatur
-    address: 0
+    address: 41
     unit_of_measurement: "°C"
     value_type: U_WORD
     multiply: 2
