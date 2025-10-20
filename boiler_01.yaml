@@ -4,7 +4,7 @@ sensor:
     name: "${name} Boiler 1 Temperatur oben"
     id: ${name}_Boiler_1_Temperatur_oben
     register_type: read
-    address: 0
+    address: 93
     unit_of_measurement: "°C"
     device_class: "temperature"
     state_class: "measurement"
@@ -17,7 +17,7 @@ sensor:
     name: "${name} Boiler 1 Pumpe Ansteuerung"
     id: ${name}_Boiler_1_Pumpe_Ansteuerung
     register_type: read
-    address: 239
+    address: 144
     unit_of_measurement: "%"
     value_type: U_WORD
 
@@ -26,7 +26,7 @@ number:
     modbus_controller_id: ${modbus_controller_id}
     name: "${name} Boiler 1 Gewünschte Boilertemperatur"
     id: ${name}_Boiler_1_Gewuenschte_Boilertemperatur
-    address: 138
+    address: 339
     unit_of_measurement: "°C"
     value_type: U_WORD
     multiply: 2
@@ -37,7 +37,7 @@ number:
     modbus_controller_id: ${modbus_controller_id}
     name: "${name} Boiler 1 Nachladen, wenn Boilertemperatur unter"
     id: ${name}_Boiler_1_Nachladen_wenn_Boilertemperatur_unter
-    address: 227
+    address: 342
     unit_of_measurement: "°C"
     value_type: U_WORD
     multiply: 2
