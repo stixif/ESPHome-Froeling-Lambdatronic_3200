@@ -4,7 +4,7 @@ sensor:
     name: "${name} Puffer 1 Temperatur oben"
     id: ${name}_Puffer_1_Temperatur_oben
     register_type: read
-    address: 2000
+    address: 118
     unit_of_measurement: "°C"
     device_class: "temperature"
     state_class: "measurement"
@@ -17,7 +17,7 @@ sensor:
     name: "${name} Puffer 1 Temperatur mitte"
     id: ${name}_Puffer_1_Temperatur_mitte
     register_type: read
-    address: 2001
+    address: 119
     unit_of_measurement: "°C"
     device_class: "temperature"
     state_class: "measurement"
@@ -30,7 +30,7 @@ sensor:
     name: "${name} Puffer 1 Temperatur unten"
     id: ${name}_Puffer_1_Temperatur_unten
     register_type: read
-    address: 2002
+    address: 120
     unit_of_measurement: "°C"
     device_class: "temperature"
     state_class: "measurement"
@@ -43,7 +43,7 @@ sensor:
     name: "${name} Puffer 1 Ladezustand"
     id: ${name}_Puffer_1_Ladezustand
     register_type: read
-    address: 2006
+    address: 225
     unit_of_measurement: "%"
     value_type: U_WORD  
 
@@ -52,7 +52,7 @@ sensor:
     name: "${name} Puffer 1 Pufferpumpen Ansteuerung"
     id: ${name}_Puffer_1_Pufferpumpen_Ansteuerung
     register_type: read
-    address: 2003
+    address: 140
     unit_of_measurement: "%"
     value_type: U_WORD
 
