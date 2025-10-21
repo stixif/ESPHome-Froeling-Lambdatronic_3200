@@ -24,3 +24,80 @@ sensor:
     value_type: U_WORD
     filters:
       - multiply: 0.5
+
+binary_sensor:
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${name} HK1 - Pumpe AN AUS"
+    id: ${name}_HK1_Pumpe_AN_AUS
+    register_type: coil
+    address: 8 # Heizkreispumpe 0
+    #address: 0 # Heizkreispumpe 1 - wrong ?
+
+number:
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${name} HK1 - Gewünschte Vorlauf-temperatur bei -10°C Außentemperatur"
+    id: ${name}_HK1_Vorlauf_Temperatur_minus_10C_Aussentemperatur
+    address: 87
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: 10
+    max_value: 110
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${name} HK1 - Gewünschte Vorlauf-temperatur bei +10°C Außentemperatur"
+    id: ${name}_HK1_Vorlauf_Temperatur_10C_Aussentemperatur
+    address: 88
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: 10
+    max_value: 110
+    
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${name} HK1 - Absenkung der Vorlauftemperatur im Absenkbetrieb"
+    id: ${name}_HK1_Absenkung_der_Vorlauftemperatur_im_Absenkbetrieb
+    address: 79
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: 0
+    max_value: 70
+    
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${name} HK1 - Außentemperatur, unter der die Heizkreispumpe im Heizbetrieb
+einschaltet"
+    id: ${name}_HK1_Aussentemperatur_unter_der_die_Heizkreispumpe_im_Heizbetrieb_einschaltet
+    address: 80
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: -20
+    max_value: 50
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${name} HK1 - Außentemperatur, unter der die Heizkreispumpe im Absenkbetrieb einschaltet"
+    id: ${name}_HK1_Aussentemperatur_unter_der_die_Heizkreispumpe_im_Absenkbetrieb_einschaltet
+    address: 81
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: -20
+    max_value: 50
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${name} HK1 - Frostschutztemperatur"
+    id: ${name}_HK1_Frostschutztemperatur
+    address: 86
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: -10
+    max_value: 20
