@@ -25,3 +25,78 @@ sensor:
     filters:
       - multiply: 0.5
 
+binary_sensor:
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${name} HK2 - Pumpe AN AUS"
+    id: ${name}_HK2_Pumpe_AN_AUS
+    register_type: coil
+    address: 0 # Heizkreispumpe 1
+    #address: 1 # Heizkreispumpe 2 - wrong ?
+
+number:
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${name} HK2 - Gewünschte Vorlauf-temperatur bei -10°C Außentemperatur"
+    id: ${name}_HK2_Vorlauf_Temperatur_minus_10C_Aussentemperatur
+    address: 101
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: 10
+    max_value: 110
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${name} HK2 - Gewünschte Vorlauf-temperatur bei +10°C Außentemperatur"
+    id: ${name}_HK2_Vorlauf_Temperatur_10C_Aussentemperatur
+    address: 102
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: 10
+    max_value: 110
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${name} HK2 - Absenkung der Vorlauftemperatur im Absenkbetrieb"
+    id: ${name}_HK2_Absenkung_der_Vorlauftemperatur_im_Absenkbetrieb
+    address: 93
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: 0
+    max_value: 70
+    
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${name} HK2 - Außentemperatur, unter der die Heizkreispumpe im Heizbetrieb einschaltet"
+    id: ${name}_HK2_Aussentemperatur_unter_der_die_Heizkreispumpe_im_Heizbetrieb_einschaltet
+    address: 94
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: -20
+    max_value: 50
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${name} HK2 - Außentemperatur, unter der die Heizkreispumpe im Absenkbetrieb einschaltet"
+    id: ${name}_HK2_Aussentemperatur_unter_der_die_Heizkreispumpe_im_Absenkbetrieb_einschaltet
+    address: 95
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: -20
+    max_value: 50
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "${name} HK2 - Frostschutztemperatur"
+    id: ${name}_HK2_Frostschutztemperatur
+    address: 100
+    unit_of_measurement: "°C"
+    value_type: U_WORD
+    multiply: 2
+    min_value: -10
+    max_value: 20
