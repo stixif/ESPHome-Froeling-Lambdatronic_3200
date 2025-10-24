@@ -31,8 +31,8 @@ binary_sensor:
     name: "${name} HK1 - Pumpe AN AUS"
     id: ${name}_HK1_Pumpe_AN_AUS
     register_type: coil
-    address: 8 # Heizkreispumpe 0
-    #address: 0 # Heizkreispumpe 1 - wrong ?
+    #address: 8 # Heizkreispumpe 0
+    address: 0 # Heizkreispumpe 1 - wrong ?
 
 number:
   - platform: modbus_controller
